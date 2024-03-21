@@ -1,4 +1,6 @@
+import 'package:explore_mundo_app/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     
@@ -15,20 +16,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF293b4b)),
         useMaterial3: true,
+
+        textTheme: GoogleFonts.urbanistTextTheme(
+          Theme.of(context).textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white),
+        ),
+        
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Demo'),
-        ),
-        body: const Center(
-          child: Text(
-            'Hello, World!',
-            style: TextStyle(fontSize: 24),
-          ),
-        ),
-      )
+      home: const MainPage(),
     );
   }
 }
