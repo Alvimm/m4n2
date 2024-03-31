@@ -13,18 +13,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Widget> pages = [
+  final List<Widget> screens = [
     const DestinationsScreen(),
     const TravelPackagesScreen(),
     const ContactScreen(),
     const AboutScreen(),
   ];
-
-  int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: pages.length,
+      length: screens.length,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: MyColors.primary,
@@ -42,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         body: TabBarView(
-          children: pages,
+          children: screens,
         ),
         backgroundColor: MyColors.secondary,
       ),
