@@ -1,4 +1,7 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:explore_mundo_app/utils/colors.dart';
+import 'package:explore_mundo_app/widgets/details_packages.dart';
 import 'package:flutter/material.dart';
 import 'package:explore_mundo_app/utils/data.dart';
 import 'package:ionicons/ionicons.dart';
@@ -33,7 +36,14 @@ class _DestinationContainerState extends State<DestinationContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DetailsPackages(place: widget.place)),
+      );
+    },
+    child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 25),
       width: MediaQuery.of(context).size.width * .9,
       child: Stack(
@@ -42,7 +52,18 @@ class _DestinationContainerState extends State<DestinationContainer> {
           buildDestinationText(context),
         ],
       ),
-    );
+    ),
+  );
+    // return Container(
+    //   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 25),
+    //   width: MediaQuery.of(context).size.width * .9,
+    //   child: Stack(
+    //     children: [
+    //       buildDestinationImage(context),
+    //       buildDestinationText(context),
+    //     ],
+    //   ),
+    // );
   }
 
   Widget buildDestinationImage(BuildContext context) {
@@ -80,7 +101,6 @@ class _DestinationContainerState extends State<DestinationContainer> {
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 24,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
