@@ -1,5 +1,6 @@
 import 'package:explore_mundo_app/utils/colors.dart';
 import 'package:explore_mundo_app/utils/env.dart';
+import 'package:explore_mundo_app/widgets/heading_text.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,12 +14,7 @@ class ContactScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
       child: Column(
         children: <Widget>[
-          const Text(
-            'Entre em contato comigo!',
-            style: TextStyle(
-              fontSize: 30,
-            ),
-          ),
+          const HeadingText(heading: 'Entre em contato comigo!'),
           Padding(
             padding: const EdgeInsets.only(top: 100, bottom: 20),
             child: IconButton(
