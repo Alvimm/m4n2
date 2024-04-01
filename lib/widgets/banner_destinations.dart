@@ -54,16 +54,6 @@ class _DestinationContainerState extends State<DestinationContainer> {
       ),
     ),
   );
-    // return Container(
-    //   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 25),
-    //   width: MediaQuery.of(context).size.width * .9,
-    //   child: Stack(
-    //     children: [
-    //       buildDestinationImage(context),
-    //       buildDestinationText(context),
-    //     ],
-    //   ),
-    // );
   }
 
   Widget buildDestinationImage(BuildContext context) {
