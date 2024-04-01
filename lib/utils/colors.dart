@@ -8,4 +8,5 @@ class MyColors{
   static const Color github = Color(0xFF000000);
   static const Color textPrimary = Colors.black87;
   static const Color background = Colors.black54;
+  static const Color hintText = Colors.white38;
   }
