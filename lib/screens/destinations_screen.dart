@@ -1,6 +1,7 @@
 import 'package:explore_mundo_app/utils/colors.dart';
 import 'package:explore_mundo_app/widgets/banner_destinations.dart';
 import 'package:explore_mundo_app/widgets/category_icon_btn.dart';
+import 'package:explore_mundo_app/widgets/custom_search_bar.dart';
 import 'package:explore_mundo_app/widgets/heading_text.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
@@ -18,13 +19,7 @@ class DestinationsScreen extends StatelessWidget {
           left: 15,
         ),
         children: const <Widget>[
-          Padding(
-            padding: EdgeInsets.only(right: 10, bottom: 30),
-            child: SearchBar(
-              hintText: 'Pesquisar Destinos',
-            ),
-          ),
-
+          CustomSearchBar(),
           HeadingText(heading: 'Destinos'),
           BannerDestinations(),
           HeadingText(
