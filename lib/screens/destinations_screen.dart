@@ -12,7 +12,6 @@ class DestinationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.secondary,
-      // appBar:
       body: ListView(
         padding: const EdgeInsets.only(
           top: 30,
