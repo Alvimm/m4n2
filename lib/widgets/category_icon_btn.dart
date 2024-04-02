@@ -15,8 +15,9 @@ class CategoryIconBtn extends StatelessWidget {
             decoration: BoxDecoration(
               color: MyColors.primary,
               borderRadius: BorderRadius.circular(50),
+              border: Border.all(color: MyColors.background, width: 2)
             ),
-            child: Icon(icon, size: 40, color: MyColors.secondary)),
+            child: Icon(icon, size: 30, color: MyColors.secondary)),
         onPressed: () {},
       ),
     );
