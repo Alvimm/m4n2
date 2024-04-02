@@ -4,7 +4,7 @@ import 'package:explore_mundo_app/utils/colors.dart';
 import 'package:explore_mundo_app/widgets/details_packages.dart';
 import 'package:flutter/material.dart';
 import 'package:explore_mundo_app/utils/data.dart';
-import 'package:ionicons/ionicons.dart';
+// import 'package:ionicons/ionicons.dart';
 
 class BannerDestinations extends StatelessWidget {
   const BannerDestinations({super.key});
@@ -32,7 +32,7 @@ class DestinationContainer extends StatefulWidget {
 }
 
 class _DestinationContainerState extends State<DestinationContainer> {
-  bool _isClicked = false;
+  // bool _isClicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,31 +48,31 @@ class _DestinationContainerState extends State<DestinationContainer> {
       width: MediaQuery.of(context).size.width * .9,
       child: Stack(
         children: [
-          buildDestinationImage(context),
-          buildDestinationText(context),
+          destinationImage(context),
+          destinationText(context),
         ],
       ),
     ),
   );
   }
 
-  Widget buildDestinationImage(BuildContext context) {
+  Widget destinationImage(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(19),
-          border: Border.all(color: Colors.black.withOpacity(0.7), width: 3)),
+          border: Border.all(color: MyColors.background, width: 3)),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),
         child: Image.asset(
           widget.place.image,
           fit: BoxFit.cover,
-          height: MediaQuery.of(context).size.height * .3,
+          height: MediaQuery.of(context).size.height * .33,
         ),
       ),
     );
   }
 
-  Widget buildDestinationText(BuildContext context) {
+  Widget destinationText(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         color: MyColors.background,
@@ -94,16 +94,16 @@ class _DestinationContainerState extends State<DestinationContainer> {
                   ),
                 ),
               ),
-              IconButton(
-                color: Colors.red,
-                onPressed: () {
-                  setState(() {
-                    _isClicked = !_isClicked;
-                  });
-                },
-                icon:
-                    Icon(_isClicked ? Ionicons.heart : Ionicons.heart_outline),
-              ),
+              // IconButton(
+              //   color: Colors.red,
+              //   onPressed: () {
+              //     setState(() {
+              //       _isClicked = !_isClicked;
+              //     });
+              //   },
+              //   icon:
+              //       Icon(_isClicked ? Ionicons.heart : Ionicons.heart_outline),
+              // ),
             ],
           ),
           Text(
