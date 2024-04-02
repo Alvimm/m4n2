@@ -52,9 +52,10 @@ flutter run
 ## Screenshots
 
 <div style="display: flex; justify-content: center;">
-  <img src="https://via.placeholder.com/240x450?text=App+Screenshot+Here" width="240" height="450" style="margin-right: 10px"/>
-  <img src="https://via.placeholder.com/240x450?text=App+Screenshot+Here" width="240" height="450" style="margin-right: 10px"/>
-  <img src="https://via.placeholder.com/240x450?text=App+Screenshot+Here" width="240" height="450"/>
+  <img src="./assets/images/destinos.jpg" width="240" height="450" style="margin-right: 10px"/>
+  <img src="./assets/images/pacotes.jpg" width="240" height="450" style="margin-right: 10px"/>
+  <img src="./assets/images/contato.jpg" width="240" height="450" style="margin-right: 10px"/>
+  <img src="./assets/images/sobre.jpg" width="240" height="450"/>
 </div> 
 
 
