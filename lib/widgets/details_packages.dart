@@ -41,68 +41,62 @@ class DetailsPackages extends StatelessWidget {
     );
 
     return Scaffold(
-      backgroundColor: MyColors.secondary,
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        foregroundColor: MyColors.secondary,
-        backgroundColor: MyColors.background,
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.4,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(place.image),
+        backgroundColor: MyColors.secondary,
+        extendBodyBehindAppBar: true,
+
+        appBar: AppBar(
+          foregroundColor: MyColors.secondary,
+          backgroundColor: MyColors.background,
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.4,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(place.image),
+                  ),
                 ),
               ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(32),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: HeadingText(heading: place.title)),
-                        Text(
-                          place.from,
-                          style: const TextStyle(
-                            color: MyColors.background,
-                            fontSize: 18
-                          ),
+               Container(
+                  padding: const EdgeInsets.all(32),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                                padding: const EdgeInsets.only(bottom: 8),
+                                child: HeadingText(heading: place.title)),
+                            Text(
+                              place.from,
+                              style: const TextStyle(
+                                  color: MyColors.background, fontSize: 18),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      Icon(
+                        Icons.star,
+                        color: place.rating <= 75
+                            ? Colors.red[500]
+                            : Colors.yellow[500],
+                      ),
+                      Text(place.rating.toString()),
+                    ],
                   ),
-                  Icon(
-                    Icons.star,
-                    color: place.stars <= 75 ? Colors.red[500] : Colors.yellow[500],
-                  ),
-                  Text(place.stars.toString()),
-                ],
+                ),
+              buttonSection,
+              Container(
+                padding: const EdgeInsets.all(32),
+                child: Text(place.description,
+                    softWrap: true, style: const TextStyle(fontSize: 19)),
               ),
-            ),
-            buttonSection,
-            Container(
-              padding: const EdgeInsets.all(32),
-              child: Text(
-                place.description,
-                softWrap: true,
-                style: const TextStyle(
-                  fontSize: 19
-                )
-              ),
-            ),
-          ],
-        ),
-      )
-    );
+            ],
+          ),
+        ));
   }
 }
