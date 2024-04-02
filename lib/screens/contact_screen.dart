@@ -10,9 +10,7 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
-      child: Column(
+    return Column(
         children: <Widget>[
           const HeadingText(heading: 'Entre em contato comigo!'),
           Padding(
@@ -40,8 +38,7 @@ class ContactScreen extends StatelessWidget {
             color: MyColors.github,
           ),
         ],
-      ),
-    );
+      );
   }
 
   void _launchUrl(Uri url) async {
