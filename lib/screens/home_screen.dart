@@ -4,6 +4,7 @@ import 'package:explore_mundo_app/screens/travel_packages_screen.dart';
 import 'package:explore_mundo_app/screens/about_screen.dart';
 import 'package:explore_mundo_app/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -32,9 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
             dividerColor: MyColors.primary,
             indicatorColor: MyColors.secondary,
             tabs: [
-              Tab(icon: Icon(Icons.place_outlined),text: 'Destinos'),
-              Tab(icon: Icon(Icons.favorite_outline), text: 'Pacotes'),
-              Tab(icon: Icon(Icons.phone_outlined), text: 'Contato'),
+              Tab(icon: Icon(Ionicons.map_outline),text: 'Destinos'),
+              Tab(icon: Icon(Ionicons.cube_outline), text: 'Pacotes'),
+              Tab(icon: Icon(Ionicons.call_outline), text: 'Contato'),
               Tab(icon: Icon(Icons.info_outline), text: 'Sobre'),
             ],
           ),
