@@ -53,6 +53,7 @@ flutter run
 
 <div style="display: flex; justify-content: center;">
   <img src="./assets/images/destinos.jpg" width="240" height="450" style="margin-right: 10px"/>
+  <img src="./assets/images/detalhes.jpg" width="240" height="450" style="margin-right: 10px"/>
   <img src="./assets/images/pacotes.jpg" width="240" height="450" style="margin-right: 10px"/>
   <img src="./assets/images/contato.jpg" width="240" height="450" style="margin-right: 10px"/>
   <img src="./assets/images/sobre.jpg" width="240" height="450"/>
