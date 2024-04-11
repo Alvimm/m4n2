@@ -1,6 +1,6 @@
 import 'package:explore_mundo_app/utils/colors.dart';
 import 'package:explore_mundo_app/utils/data.dart';
-import 'package:explore_mundo_app/widgets/heading_text.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPackages extends StatelessWidget {
@@ -43,7 +43,6 @@ class DetailsPackages extends StatelessWidget {
     return Scaffold(
         backgroundColor: MyColors.secondary,
         extendBodyBehindAppBar: true,
-
         appBar: AppBar(
           foregroundColor: MyColors.secondary,
           backgroundColor: MyColors.background,
@@ -60,35 +59,39 @@ class DetailsPackages extends StatelessWidget {
                   ),
                 ),
               ),
-               Container(
-                  padding: const EdgeInsets.all(32),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                                padding: const EdgeInsets.only(bottom: 8),
-                                child: HeadingText(heading: place.title)),
-                            Text(
-                              place.from,
-                              style: const TextStyle(
-                                  color: MyColors.background, fontSize: 18),
-                            ),
-                          ],
-                        ),
+              Container(
+                padding: const EdgeInsets.all(32),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: Text(
+                                place.title,
+                                style: GoogleFonts.urbanist(
+                                    fontWeight: FontWeight.w700, fontSize: 30,color: MyColors.textPrimary,),
+                              )),
+                          Text(
+                            place.from,
+                            style: const TextStyle(
+                                color: MyColors.background, fontSize: 18),
+                          ),
+                        ],
                       ),
-                      Icon(
-                        Icons.star,
-                        color: place.rating <= 75
-                            ? Colors.red[500]
-                            : Colors.yellow[500],
-                      ),
-                      Text(place.rating.toString()),
-                    ],
-                  ),
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: place.rating <= 75
+                          ? Colors.red[500]
+                          : Colors.yellow[500],
+                    ),
+                    Text(place.rating.toString()),
+                  ],
                 ),
+              ),
               buttonSection,
               Container(
                 padding: const EdgeInsets.all(32),
